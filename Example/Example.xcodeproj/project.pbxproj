@@ -16,8 +16,8 @@
 		2857502E24C21EB400ED22AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2857500224C21EB400ED22AD /* Assets.xcassets */; };
 		8CDA47052BDA09A600F24633 /* CustomStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47042BDA09A600F24633 /* CustomStyleView.swift */; };
 		8CDA47062BDA09A600F24633 /* CustomStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47042BDA09A600F24633 /* CustomStyleView.swift */; };
-		8CDA47122BDA0F7300F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47112BDA0F7300F24633 /* PagerTabStripView */; };
-		8CDA47142BDA0F7900F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47132BDA0F7900F24633 /* PagerTabStripView */; };
+		8CDA47172BDA141300F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47162BDA141300F24633 /* PagerTabStripView */; };
+		8CDA47192BDA141800F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47182BDA141800F24633 /* PagerTabStripView */; };
 		AB28D6D9269F58C500679D5E /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28D6D8269F58C500679D5E /* URLImageView.swift */; };
 		AB28D6DB269F58D600679D5E /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28D6DA269F58D600679D5E /* URLImageModel.swift */; };
 		AB28D6DD269F58E300679D5E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28D6DC269F58E300679D5E /* ImageCache.swift */; };
@@ -45,7 +45,7 @@
 		2857501124C21EB400ED22AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2857501224C21EB400ED22AD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		8CDA47042BDA09A600F24633 /* CustomStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStyleView.swift; sourceTree = "<group>"; };
-		8CDA47102BDA0F6A00F24633 /* pager-tab-strip-view */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "pager-tab-strip-view"; path = ..; sourceTree = "<group>"; };
+		8CDA47152BDA13F700F24633 /* PagerTabStripView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PagerTabStripView; path = ..; sourceTree = "<group>"; };
 		AB28D6D8269F58C500679D5E /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		AB28D6DA269F58D600679D5E /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		AB28D6DC269F58E300679D5E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CDA47122BDA0F7300F24633 /* PagerTabStripView in Frameworks */,
+				8CDA47172BDA141300F24633 /* PagerTabStripView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CDA47142BDA0F7900F24633 /* PagerTabStripView in Frameworks */,
+				8CDA47192BDA141800F24633 /* PagerTabStripView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 		28574FFA24C21EB200ED22AD = {
 			isa = PBXGroup;
 			children = (
-				8CDA47102BDA0F6A00F24633 /* pager-tab-strip-view */,
+				8CDA47152BDA13F700F24633 /* PagerTabStripView */,
 				28574FFF24C21EB200ED22AD /* Shared */,
 				2857500924C21EB400ED22AD /* iOS */,
 				2857501024C21EB400ED22AD /* macOS */,
@@ -245,7 +245,7 @@
 			);
 			name = "Example (iOS)";
 			packageProductDependencies = (
-				8CDA47112BDA0F7300F24633 /* PagerTabStripView */,
+				8CDA47162BDA141300F24633 /* PagerTabStripView */,
 			);
 			productName = "Example (iOS)";
 			productReference = 2857500724C21EB400ED22AD /* Example.app */;
@@ -265,7 +265,7 @@
 			);
 			name = "Example (macOS)";
 			packageProductDependencies = (
-				8CDA47132BDA0F7900F24633 /* PagerTabStripView */,
+				8CDA47182BDA141800F24633 /* PagerTabStripView */,
 			);
 			productName = "Example (macOS)";
 			productReference = 2857500F24C21EB400ED22AD /* Example.app */;
@@ -599,11 +599,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8CDA47112BDA0F7300F24633 /* PagerTabStripView */ = {
+		8CDA47162BDA141300F24633 /* PagerTabStripView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PagerTabStripView;
 		};
-		8CDA47132BDA0F7900F24633 /* PagerTabStripView */ = {
+		8CDA47182BDA141800F24633 /* PagerTabStripView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PagerTabStripView;
 		};
