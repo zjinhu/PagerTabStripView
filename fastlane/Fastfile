@@ -16,7 +16,7 @@ lane :release_pod do |options|
   git_pull(only_tags: true)
 
   # 确认是 master 分支
-   ensure_git_branch
+  ensure_git_branch
   # 确认是 main 分支
   # ensure_git_branch( branch: 'main' )
   
