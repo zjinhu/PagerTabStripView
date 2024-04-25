@@ -2,40 +2,39 @@
 //  PagerTabItemModifier.swift
 //  PagerTabStripView
 //
-//  Copyright © 2022 Xmartlabs SRL. All rights reserved.
+//  Copyright © 2021 Xmartlabs SRL. All rights reserved.
 //
 
 import SwiftUI
 
-struct PagerTabItemModifier<SelectionType, NavTabView>: ViewModifier where SelectionType: Hashable, NavTabView: View {
+struct PagerTabItemModifier<NavTabView: View>: ViewModifier {
 
-    let navTabView: () -> NavTabView
-    let tag: SelectionType
+    private var navTabView: () -> NavTabView
 
-    init(tag: SelectionType, navTabView: @escaping () -> NavTabView) {
-        self.tag = tag
+    init(navTabView: @escaping () -> NavTabView) {
         self.navTabView = navTabView
     }
 
-    @MainActor func body(content: Content) -> some View {
-        GeometryReader { geometryProxy in
+    func body(content: Content) -> some View {
+        GeometryReader { reader in
             content
                 .onAppear {
-                    let frame = geometryProxy.frame(in: .named("PagerViewScrollView"))
-                    index = Int(round(frame.minX / frame.width))
-                    pagerSettings.createOrUpdate(tag: tag, index: index, view: navTabView())
+                    DispatchQueue.main.async {
+                        let frame = reader.frame(in: .named("PagerViewScrollView"))
+                        index = Int(round(frame.minX / frame.width))
+                        let tabView = navTabView()
+                        let tabViewDelegate = tabView as? PagerTabViewDelegate
+                        dataStore.setView(AnyView(tabView), at: index)
+                        dataStore.setTabViewDelegate(tabViewDelegate, at: index)
+                    }
                 }.onDisappear {
-                    pagerSettings.remove(tag: tag)
-                }
-                .onChange(of: geometryProxy.frame(in: .named("PagerViewScrollView"))) { newFrame in
-                    index = Int(round(newFrame.minX / newFrame.width))
-                }
-                .onChange(of: index) { newIndex in
-                    pagerSettings.createOrUpdate(tag: tag, index: newIndex, view: navTabView())
+                    dataStore.items[index]?.tabViewDelegate?.setState(state: .normal)
+                    dataStore.remove(at: index)
                 }
         }
     }
 
-    @EnvironmentObject private var pagerSettings: PagerSettings<SelectionType>
+    @EnvironmentObject private var dataStore: DataStore
+    @EnvironmentObject private var settings: PagerSettings
     @State private var index = -1
 }

@@ -10,8 +10,6 @@ import PagerTabStripView
 
 struct CustomStyleView: View {
 
-    @State var selection = Color(.systemBlue)
-
     private let 🌈: [Color] = [
         .red,
         .orange,
@@ -20,16 +18,16 @@ struct CustomStyleView: View {
         .blue,
         .purple
     ]
-
-    @MainActor var body: some View {
-        PagerTabStripView(selection: $selection) {
+    
+    var body: some View {
+        PagerTabStripView {
 
             ForEach(🌈, id: \.self) { color in
                 ZStack(alignment: .center) {
                     color
                     Text("Any custom View You like")
                 }
-                .pagerTabItem(tag: color) {
+                .pagerTabItem() {
                     Capsule()
                         .frame(height: 32)
                         .padding(4)
@@ -37,21 +35,25 @@ struct CustomStyleView: View {
                 }
             }
         }
-        .pagerTabStripViewStyle(.barButton(placedInToolbar: false,
-                                           pagerAnimationOnTap: .interactiveSpring(response: 0.5,
-                                                                                   dampingFraction: 1.00,
-                                                                                   blendDuration: 0.25),
-                                           tabItemHeight: 48,
-                                           barBackgroundView: {
-                                            LinearGradient(
-                                                colors: 🌈,
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                            )
-                                            .opacity(0.2)
-                                           }, indicatorView: {
-                                            Text([.orange, .green, .purple].contains(selection) ? "👍🏻" : "👎").offset(x: 0, y: -24)
-                                           }))
+        .frame(alignment: .center)
+        .pagerTabStripViewStyle(
+            .custom(
+                tabItemHeight: 48,
+                indicator: {
+                    Text("👍🏻")
+                        .offset(x: 0, y: -24)
+                },
+                background: {
+                    LinearGradient(
+                        colors: 🌈,
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                    .opacity(0.2)
+                }
+            )
+        )
+        .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("🌈 Rainbow")
     }
 }

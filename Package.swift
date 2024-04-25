@@ -1,9 +1,9 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
     name: "PagerTabStripView",
-    platforms: [.iOS(.v16), .macOS(.v13)],
+    platforms: [.iOS(.v14), .macOS(.v11)],
     products: [
         .library(name: "PagerTabStripView", targets: ["PagerTabStripView"])
     ],
@@ -12,14 +12,5 @@ let package = Package(
             name: "PagerTabStripView",
             path: "Sources"
         ),
-        .testTarget(
-            name: "PagerTabStripViewTests",
-            dependencies: ["PagerTabStripView"],
-            path: "PagerTabStripViewTests",
-            linkerSettings: [
-                .linkedFramework("CoreGraphics", .when(platforms: [.macOS, .iOS])),
-                .linkedFramework("Foundation", .when(platforms: [.macOS, .iOS]))
-            ]
-        )
     ]
 )

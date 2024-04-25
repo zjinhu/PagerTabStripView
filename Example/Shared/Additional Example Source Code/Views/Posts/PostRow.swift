@@ -2,7 +2,7 @@
 //  PostRow.swift
 //  Example (iOS)
 //
-//  Copyright © 2022 Xmartlabs SRL. All rights reserved.
+//  Copyright © 2021 Xmartlabs SRL. All rights reserved.
 //
 
 import SwiftUI
@@ -11,13 +11,13 @@ struct PostRow: View {
     var post: Post
     var withDescription: Bool = true
 
-    @MainActor var body: some View {
+    var body: some View {
         HStack(alignment: .top) {
-            Image("defaultImage")
-                .resizable()
-                .frame(width: 70, height: 70, alignment: .leading)
+            post.user.image
                 .cornerRadius(5)
+                .frame(width: 70, height: 70, alignment: .leading)
                 .padding(.vertical)
+
             VStack(alignment: .leading) {
                 if withDescription {
                     Text(post.user.name)

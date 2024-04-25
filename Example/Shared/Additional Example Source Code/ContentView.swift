@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Shared
 //
-//  Copyright © 2022 Xmartlabs SRL. All rights reserved.
+//  Copyright © 2021 Xmartlabs SRL. All rights reserved.
 //
 
 import SwiftUI
@@ -10,61 +10,38 @@ import PagerTabStripView
 
 struct ContentView: View {
 
-    @MainActor  var body: some View {
+    var body: some View {
         NavigationView {
             List {
                 NavigationLink(destination: TwitterView()) {
                     VStack(alignment: .leading) {
-                        Text("Twitter Style").font(.body).padding(.bottom, 1)
-                        Text("Scrolleable BarButtonStyle with Label").font(.subheadline)
-                    }
-                    .padding([.top, .bottom], 2)
-                }
-
-                NavigationLink(destination: InstagramView()) {
-                    VStack(alignment: .leading) {
-                        Text("Instagram style").font(.body).padding(.bottom, 1)
-                        Text("BarButtonStyle with Icon").font(.subheadline)
-                    }
-                    .padding([.top, .bottom], 2)
-                }
-
-                NavigationLink(destination: YoutubeView()) {
-                    VStack(alignment: .leading) {
-                        Text("Youtube style").font(.body).padding(.bottom, 1)
-                        Text("BarButtonStyle with Label and Icon")
+                        Text("Scrollable style")
+                            .font(.body)
+                            .padding(.bottom, 1)
+                        Text("Only label")
                             .font(.subheadline)
                     }
                     .padding([.top, .bottom], 2)
                 }
 
-                NavigationLink(destination: SegmentedView()) {
-                    Text("Segmented style")
-                        .font(.body)
-                }
 
-                NavigationLink(destination: BarStyleView()) {
-                    Text("Bar style")
-                        .font(.body)
-                }
-                NavigationLink(destination: PinterestView()) {
-                    Text("Pinterest Style")
-                        .font(.body)
-                }
-                NavigationLink(destination: AudibleView()) {
-                    Text("Audible (amazon) Style")
-                        .font(.body)
-                }
                 NavigationLink(destination: CustomStyleView()) {
                     VStack(alignment: .leading) {
-                        Text("Custom style").font(.body).padding(.bottom, 1)
-                        Text("BarButtonStyle with custom indicatorView and barBackgroundView ").font(.subheadline)
+                        Text("Custom style")
+                            .font(.body)
+                            .padding(.bottom, 1)
                     }
                     .padding([.top, .bottom], 2)
                 }
-                NavigationLink(destination: SimpleView()) {
-                    Text("Custom style 2")
-                        .font(.body)
+
+                NavigationLink(destination: TwitterView(swipeGestureEnabled: false)) {
+                    VStack(alignment: .leading) {
+                        Text("Scrollable style, swipe disabled")
+                            .font(.body)
+                            .padding(.bottom, 1)
+                        Text("Only label")
+                            .font(.subheadline)
+                    }
                 }
             }
         }

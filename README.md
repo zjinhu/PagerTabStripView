@@ -1,13 +1,11 @@
 ![PagerTabStripView: First pager view built in pure SwiftUI](https://raw.githubusercontent.com/xmartlabs/PagerTabStripView/master/banner.png)
 
 <p align="left">
-<a href="https://github.com/xmartlabs/PagerTabStripView/actions/workflows/build-test.yml"><img src="https://github.com/xmartlabs/PagerTabStripView/actions/workflows/build-test.yml/badge.svg" alt="build and test" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift5-compatible-4BC51D.svg?style=flat" alt="Swift 5 compatible" /></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
-<a href="https://cocoapods.org/pods/PagerTabStripView"><img src="https://img.shields.io/cocoapods/v/PagerTabStripView.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/xmartlabs/PagerTabStripView/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
+
 
 Made with :heart: by [Xmartlabs](http://xmartlabs.com) team. [XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip) for SwiftUI!
 
@@ -17,12 +15,11 @@ PagerTabStripView is the first pager view built in pure SwiftUI. It provides a c
 
 <table>
   <tr>
-    <th><img src="Example/Media/twitterStyleExample.gif" width="250"/></th>
-    <th><img src="Example/Media/instagramStyleExample.gif" width="250"/></th>
-    <th><img src="Example/Media/LogOutExample.gif" width="250"/></th>
+    <th><img src="Example/Media/customStyleExample.gif" width="250"/></th>
     <th><img src="Example/Media/scrollableStyleExample.gif" width="250"/></th>
   </tr>
 </table>
+
 
 Unlike Apple's TabView it provides:
 
@@ -233,37 +230,8 @@ In this example, we add some settings like the tab bar height, indicator view an
     <img src="Example/Media/addPagerSettings.gif">
 </div>
 
-#### Bar style
 
-This style only displays a bar that indicates the current selected page. 
-
-The customizable settings are:
-- `placedInToolbar`: If set to true, the TabBar items will be placed in the NavigationBar. The Pager must be a added inside a NavigationView.
-- `pagerAnimationOnTap`: Animation used when the selection changes. 
-- `pagerAnimationOnSwipe`: Animation used when the drag gesture changes the traslation. 
-- `indicatorViewHeight`: Height of the Indicator view.
-- `indicatorView`: View representing the indicator view. 
-
-<div style="text-align:center">
-    <img src="Example/Media/barStyleExample.gif">
-</div>
-
-#### Segmented style
-
-This style uses a Segmented Picker to indicate the selected page. You can indicate the segmented color, its padding and if you want it to be plced inside the toolbar.
-
-The customizable settings are:
-- `placedInToolbar`: If true TabBar items are placed in the NavigationBar. The Pager must be a added inside a NavigationView.
-- `pagerAnimationOnTap`: Animation used when the selection changes. 
-- `pagerAnimationOnSwipe`: Animation used when the drag gesture changes the traslation.
-- `backgroundColor`: Color of the segmented picker.
-- `padding`: Padding of the Segmented picker.
-
-<div style="text-align:center">
-    <img src="Example/Media/segmentedStyleExample.gif">
-</div>
-
-#### Custom style
+Custom style
 
 We can build any custom styles by using bar and scrollablebar styles and providing custom views representing the indicator and the tabbar container view. Check out the example below. There are some other examples in the Example app. 
 
@@ -326,27 +294,9 @@ Follow these 3 steps to run Example project
 - Open PagerTabStripView workspace.
 - Run the _Example_ project.
 
-## Installation
-
-### CocoaPods
-
-To install PagerTabStripView using CocoaPods, simply add the following line to your Podfile:
-
-```ruby
-pod 'PagerTabStripView', '~> 4.0'
-```
-
-### Carthage
-
-To install PagerTabStripView using Carthage, simply add the following line to your Cartfile:
-
-```ruby
-github "xmartlabs/PagerTabStripView" ~> 4.0
-```
-
 ## Requirements
 
-- iOS 16+
+- iOS 14+
 - Xcode 14.2+
 
 ## Author

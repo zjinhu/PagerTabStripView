@@ -1,5 +1,5 @@
 //
-//  TweetsModel.swift
+//  LikesModel.swift
 //  Example (iOS)
 //
 //  Copyright © 2021 Xmartlabs SRL. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TweetsModel: ObservableObject {
+class LikesModel: ObservableObject {
 
     var posts: [Post] {
         PostsFactory.shared.posts
