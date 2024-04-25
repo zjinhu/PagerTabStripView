@@ -114,8 +114,8 @@ public enum PagerStyle {
 
     case barButton(indicatorBarHeight: CGFloat = 2,
                    indicatorBarColor: Color = .blue,
-                   tabItemSpacing: CGFloat = 0,
-                   tabItemHeight: CGFloat = 60,
+                   tabItemSpacing: CGFloat = 10,
+                   tabItemHeight: CGFloat = 50,
                    placedInToolbar: Bool = false)
 }
 
