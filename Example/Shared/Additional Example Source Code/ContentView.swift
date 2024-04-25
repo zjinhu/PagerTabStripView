@@ -23,7 +23,28 @@ struct ContentView: View {
                     }
                     .padding([.top, .bottom], 2)
                 }
+                
+                NavigationLink(destination: InstagramView()) {
+                    VStack(alignment: .leading) {
+                        Text("Normal style")
+                            .font(.body)
+                            .padding(.bottom, 1)
+                        Text("Only icon")
+                            .font(.subheadline)
+                    }
+                    .padding([.top, .bottom], 2)
+                }
 
+                NavigationLink(destination: YoutubeView()) {
+                    VStack(alignment: .leading) {
+                        Text("Normal style")
+                            .font(.body)
+                            .padding(.bottom, 1)
+                        Text("Label and icon")
+                            .font(.subheadline)
+                    }
+                    .padding([.top, .bottom], 2)
+                }
 
                 NavigationLink(destination: CustomStyleView()) {
                     VStack(alignment: .leading) {
@@ -32,6 +53,11 @@ struct ContentView: View {
                             .padding(.bottom, 1)
                     }
                     .padding([.top, .bottom], 2)
+                }
+
+                NavigationLink(destination: BarStyleView()) {
+                    Text("Bar style")
+                        .font(.body)
                 }
 
                 NavigationLink(destination: TwitterView(swipeGestureEnabled: false)) {

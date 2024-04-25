@@ -18,6 +18,30 @@
 		8CDA47062BDA09A600F24633 /* CustomStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47042BDA09A600F24633 /* CustomStyleView.swift */; };
 		8CDA47172BDA141300F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47162BDA141300F24633 /* PagerTabStripView */; };
 		8CDA47192BDA141800F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47182BDA141800F24633 /* PagerTabStripView */; };
+		8CDA471C2BDA282700F24633 /* InstagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA471B2BDA282700F24633 /* InstagramView.swift */; };
+		8CDA471D2BDA282700F24633 /* InstagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA471B2BDA282700F24633 /* InstagramView.swift */; };
+		8CDA471F2BDA282E00F24633 /* YoutubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA471E2BDA282E00F24633 /* YoutubeView.swift */; };
+		8CDA47202BDA282E00F24633 /* YoutubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA471E2BDA282E00F24633 /* YoutubeView.swift */; };
+		8CDA47222BDA283400F24633 /* BarStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47212BDA283400F24633 /* BarStyleView.swift */; };
+		8CDA47232BDA283400F24633 /* BarStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47212BDA283400F24633 /* BarStyleView.swift */; };
+		8CDA472B2BDA284700F24633 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47242BDA284700F24633 /* GalleryModel.swift */; };
+		8CDA472C2BDA284700F24633 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47242BDA284700F24633 /* GalleryModel.swift */; };
+		8CDA472D2BDA284700F24633 /* LikedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47252BDA284700F24633 /* LikedModel.swift */; };
+		8CDA472E2BDA284700F24633 /* LikedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47252BDA284700F24633 /* LikedModel.swift */; };
+		8CDA472F2BDA284700F24633 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47262BDA284700F24633 /* ListModel.swift */; };
+		8CDA47302BDA284700F24633 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47262BDA284700F24633 /* ListModel.swift */; };
+		8CDA47312BDA284700F24633 /* SavedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47272BDA284700F24633 /* SavedModel.swift */; };
+		8CDA47322BDA284700F24633 /* SavedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47272BDA284700F24633 /* SavedModel.swift */; };
+		8CDA47332BDA284700F24633 /* InstagramNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47292BDA284700F24633 /* InstagramNavBarItem.swift */; };
+		8CDA47342BDA284700F24633 /* InstagramNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47292BDA284700F24633 /* InstagramNavBarItem.swift */; };
+		8CDA473B2BDA284C00F24633 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47352BDA284C00F24633 /* AccountModel.swift */; };
+		8CDA473C2BDA284C00F24633 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47352BDA284C00F24633 /* AccountModel.swift */; };
+		8CDA473D2BDA284C00F24633 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47362BDA284C00F24633 /* HomeModel.swift */; };
+		8CDA473E2BDA284C00F24633 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47362BDA284C00F24633 /* HomeModel.swift */; };
+		8CDA473F2BDA284C00F24633 /* TrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47372BDA284C00F24633 /* TrendingModel.swift */; };
+		8CDA47402BDA284C00F24633 /* TrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47372BDA284C00F24633 /* TrendingModel.swift */; };
+		8CDA47412BDA284C00F24633 /* YoutubeNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47392BDA284C00F24633 /* YoutubeNavBarItem.swift */; };
+		8CDA47422BDA284C00F24633 /* YoutubeNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47392BDA284C00F24633 /* YoutubeNavBarItem.swift */; };
 		AB28D6D9269F58C500679D5E /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28D6D8269F58C500679D5E /* URLImageView.swift */; };
 		AB28D6DB269F58D600679D5E /* URLImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28D6DA269F58D600679D5E /* URLImageModel.swift */; };
 		AB28D6DD269F58E300679D5E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28D6DC269F58E300679D5E /* ImageCache.swift */; };
@@ -46,6 +70,18 @@
 		2857501224C21EB400ED22AD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		8CDA47042BDA09A600F24633 /* CustomStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStyleView.swift; sourceTree = "<group>"; };
 		8CDA47152BDA13F700F24633 /* PagerTabStripView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PagerTabStripView; path = ..; sourceTree = "<group>"; };
+		8CDA471B2BDA282700F24633 /* InstagramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramView.swift; sourceTree = "<group>"; };
+		8CDA471E2BDA282E00F24633 /* YoutubeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeView.swift; sourceTree = "<group>"; };
+		8CDA47212BDA283400F24633 /* BarStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarStyleView.swift; sourceTree = "<group>"; };
+		8CDA47242BDA284700F24633 /* GalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		8CDA47252BDA284700F24633 /* LikedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedModel.swift; sourceTree = "<group>"; };
+		8CDA47262BDA284700F24633 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		8CDA47272BDA284700F24633 /* SavedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedModel.swift; sourceTree = "<group>"; };
+		8CDA47292BDA284700F24633 /* InstagramNavBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramNavBarItem.swift; sourceTree = "<group>"; };
+		8CDA47352BDA284C00F24633 /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		8CDA47362BDA284C00F24633 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		8CDA47372BDA284C00F24633 /* TrendingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingModel.swift; sourceTree = "<group>"; };
+		8CDA47392BDA284C00F24633 /* YoutubeNavBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeNavBarItem.swift; sourceTree = "<group>"; };
 		AB28D6D8269F58C500679D5E /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		AB28D6DA269F58D600679D5E /* URLImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageModel.swift; sourceTree = "<group>"; };
 		AB28D6DC269F58E300679D5E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -113,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				8CDA47042BDA09A600F24633 /* CustomStyleView.swift */,
+				8CDA471E2BDA282E00F24633 /* YoutubeView.swift */,
+				8CDA47212BDA283400F24633 /* BarStyleView.swift */,
+				8CDA471B2BDA282700F24633 /* InstagramView.swift */,
 				AB89C58826961E9E002E7B28 /* TwitterView.swift */,
 				28070C6126B2005C002346E1 /* Additional Example Source Code */,
 				2857500224C21EB400ED22AD /* Assets.xcassets */,
@@ -144,6 +183,45 @@
 				2857501224C21EB400ED22AD /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		8CDA47282BDA284700F24633 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CDA47242BDA284700F24633 /* GalleryModel.swift */,
+				8CDA47252BDA284700F24633 /* LikedModel.swift */,
+				8CDA47262BDA284700F24633 /* ListModel.swift */,
+				8CDA47272BDA284700F24633 /* SavedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CDA472A2BDA284700F24633 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				8CDA47282BDA284700F24633 /* Models */,
+				8CDA47292BDA284700F24633 /* InstagramNavBarItem.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		8CDA47382BDA284C00F24633 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CDA47352BDA284C00F24633 /* AccountModel.swift */,
+				8CDA47362BDA284C00F24633 /* HomeModel.swift */,
+				8CDA47372BDA284C00F24633 /* TrendingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CDA473A2BDA284C00F24633 /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				8CDA47382BDA284C00F24633 /* Models */,
+				8CDA47392BDA284C00F24633 /* YoutubeNavBarItem.swift */,
+			);
+			path = Youtube;
 			sourceTree = "<group>";
 		};
 		AB28D6CE269F51AD00679D5E /* Helpers */ = {
@@ -204,6 +282,8 @@
 		AB9F87F026826D9800CCBFC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CDA473A2BDA284C00F24633 /* Youtube */,
+				8CDA472A2BDA284700F24633 /* Instagram */,
 				AB89C57F26961E7E002E7B28 /* Twitter */,
 				AB9F87F126826D9F00CCBFC3 /* Posts */,
 			);
@@ -333,22 +413,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB7EEE8F26ABF06A008804D4 /* MediaModel.swift in Sources */,
+				8CDA472D2BDA284700F24633 /* LikedModel.swift in Sources */,
+				8CDA473D2BDA284C00F24633 /* HomeModel.swift in Sources */,
 				8CDA47052BDA09A600F24633 /* CustomStyleView.swift in Sources */,
 				2857502B24C21EB400ED22AD /* ContentView.swift in Sources */,
+				8CDA47412BDA284C00F24633 /* YoutubeNavBarItem.swift in Sources */,
 				AB28D6D9269F58C500679D5E /* URLImageView.swift in Sources */,
+				8CDA473B2BDA284C00F24633 /* AccountModel.swift in Sources */,
 				AB9F87F826826E4C00CCBFC3 /* PostRow.swift in Sources */,
 				AB9F87F326826DB000CCBFC3 /* PostsList.swift in Sources */,
 				AB89C57B26961DC8002E7B28 /* PostDetail.swift in Sources */,
 				2857502924C21EB400ED22AD /* ExampleApp.swift in Sources */,
 				AB89C58926961E9E002E7B28 /* TwitterView.swift in Sources */,
 				AB7EEE9126ABF076008804D4 /* LikesModel.swift in Sources */,
+				8CDA472B2BDA284700F24633 /* GalleryModel.swift in Sources */,
+				8CDA47332BDA284700F24633 /* InstagramNavBarItem.swift in Sources */,
 				AB7EEE8D26ABF05D008804D4 /* TweetsModel.swift in Sources */,
+				8CDA472F2BDA284700F24633 /* ListModel.swift in Sources */,
 				AB28D6DD269F58E300679D5E /* ImageCache.swift in Sources */,
+				8CDA47312BDA284700F24633 /* SavedModel.swift in Sources */,
 				AB28D6DB269F58D600679D5E /* URLImageModel.swift in Sources */,
 				AB9F87DF26826C2000CCBFC3 /* PostsFactory.swift in Sources */,
+				8CDA47222BDA283400F24633 /* BarStyleView.swift in Sources */,
 				AB9F87EC26826CB500CCBFC3 /* User.swift in Sources */,
 				AB9F87E726826C4D00CCBFC3 /* Post.swift in Sources */,
 				AB89C58126961E8E002E7B28 /* TwitterNavBarItem.swift in Sources */,
+				8CDA471F2BDA282E00F24633 /* YoutubeView.swift in Sources */,
+				8CDA473F2BDA284C00F24633 /* TrendingModel.swift in Sources */,
+				8CDA471C2BDA282700F24633 /* InstagramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,10 +448,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDA47232BDA283400F24633 /* BarStyleView.swift in Sources */,
 				28070C6426B200F5002346E1 /* TwitterView.swift in Sources */,
+				8CDA471D2BDA282700F24633 /* InstagramView.swift in Sources */,
+				8CDA47342BDA284700F24633 /* InstagramNavBarItem.swift in Sources */,
 				2857502C24C21EB400ED22AD /* ContentView.swift in Sources */,
+				8CDA473C2BDA284C00F24633 /* AccountModel.swift in Sources */,
 				2857502A24C21EB400ED22AD /* ExampleApp.swift in Sources */,
+				8CDA47402BDA284C00F24633 /* TrendingModel.swift in Sources */,
+				8CDA47422BDA284C00F24633 /* YoutubeNavBarItem.swift in Sources */,
+				8CDA47322BDA284700F24633 /* SavedModel.swift in Sources */,
+				8CDA472E2BDA284700F24633 /* LikedModel.swift in Sources */,
+				8CDA47202BDA282E00F24633 /* YoutubeView.swift in Sources */,
+				8CDA473E2BDA284C00F24633 /* HomeModel.swift in Sources */,
+				8CDA472C2BDA284700F24633 /* GalleryModel.swift in Sources */,
 				8CDA47062BDA09A600F24633 /* CustomStyleView.swift in Sources */,
+				8CDA47302BDA284700F24633 /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

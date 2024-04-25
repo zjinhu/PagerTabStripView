@@ -12,6 +12,10 @@ public enum PagerStyle {
     
     internal var tabItemSpacing: CGFloat {
         switch self {
+        case .bar(_, _, let spacing, _):
+            return spacing
+        case .barButton(_, _, let spacing, _, _):
+            return spacing
         case .liner(_, _, _, let spacing, _, _, _):
             return spacing
         case .custom(let spacing, _, _, _, _):
@@ -21,6 +25,10 @@ public enum PagerStyle {
     
     internal var indicatorBarColor: Color {
         switch self {
+        case .bar(_, let color, _, _):
+            return color
+        case .barButton(_, let color, _, _, _):
+            return color
         case .liner(_, let color, _, _, _, _, _):
             return color
         case .custom:
@@ -30,7 +38,10 @@ public enum PagerStyle {
     
     internal var indicatorBarHeight: CGFloat {
         switch self {
-
+        case .bar(let height, _, _, _):
+            return height
+        case .barButton(let height, _, _, _, _):
+            return height
         case .liner(let height, _, _, _, _, _, _):
             return height
         default:
@@ -40,11 +51,14 @@ public enum PagerStyle {
     
     internal var tabItemHeight: CGFloat {
         switch self {
-
+        case .barButton(_, _, _, let height, _):
+            return height
         case .liner(_, _, _, _, let height, _, _):
             return height
         case .custom(_, let height, _, _, _):
             return height
+        default:
+            return 0
         }
     }
     
@@ -68,6 +82,10 @@ public enum PagerStyle {
 
     internal var placedInToolbar: Bool {
         switch self {
+        case .bar( _, _, _, let placedInToolbar):
+            return placedInToolbar
+        case .barButton( _, _, _, _, let placedInToolbar):
+            return placedInToolbar
         case .liner( _, _, _, _, _, _, let placedInToolbar):
             return placedInToolbar
         case .custom( _, _, let placedInToolbar, _, _):
@@ -88,6 +106,17 @@ public enum PagerStyle {
                 placedInToolbar: Bool,
                 indicator: () -> AnyView,
                 background: () -> AnyView)
+    
+    case bar(indicatorBarHeight: CGFloat = 2, 
+             indicatorBarColor: Color = .blue,
+             tabItemSpacing: CGFloat = 0,
+             placedInToolbar: Bool = false)
+
+    case barButton(indicatorBarHeight: CGFloat = 2,
+                   indicatorBarColor: Color = .blue,
+                   tabItemSpacing: CGFloat = 0,
+                   tabItemHeight: CGFloat = 60,
+                   placedInToolbar: Bool = false)
 }
 
 
