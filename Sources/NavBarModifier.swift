@@ -43,6 +43,8 @@ struct NavBarWrapperView: View {
         case .bar:
             IndicatorBarView { Rectangle() }
                 .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
+        case .segmentedControl:
+            SegmentedNavBarView(selection: $selection)
         case .barButton:
             FixedSizeNavBarView(selection: $selection) { EmptyView() }
             IndicatorBarView { Rectangle() }

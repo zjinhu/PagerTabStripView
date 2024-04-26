@@ -46,6 +46,11 @@ struct ContentView: View {
                     .padding([.top, .bottom], 2)
                 }
 
+                NavigationLink(destination: SegmentedView()) {
+                    Text("Segmented style")
+                        .font(.body)
+                }
+                
                 NavigationLink(destination: CustomStyleView()) {
                     VStack(alignment: .leading) {
                         Text("Custom style")

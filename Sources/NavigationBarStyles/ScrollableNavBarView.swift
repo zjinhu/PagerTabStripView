@@ -21,7 +21,7 @@ internal struct ScrollableNavBarView: View {
     var body: some View {
         ScrollViewReader { value in
             ScrollView(.horizontal, showsIndicators: false) {
-                VStack {
+                VStack(spacing: style.indicatorPadding) {
                     HStack(spacing: style.tabItemSpacing) {
                         if dataStore.itemsCount > 0 {
                             ForEach(0..<dataStore.itemsCount, id: \.self) { idx in

@@ -14,6 +14,8 @@
 		2857502C24C21EB400ED22AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857500124C21EB200ED22AD /* ContentView.swift */; };
 		2857502D24C21EB400ED22AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2857500224C21EB400ED22AD /* Assets.xcassets */; };
 		2857502E24C21EB400ED22AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2857500224C21EB400ED22AD /* Assets.xcassets */; };
+		8CD3EE722BDB8F92009EEC43 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3EE712BDB8F92009EEC43 /* SegmentedView.swift */; };
+		8CD3EE732BDB8F92009EEC43 /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3EE712BDB8F92009EEC43 /* SegmentedView.swift */; };
 		8CDA47052BDA09A600F24633 /* CustomStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47042BDA09A600F24633 /* CustomStyleView.swift */; };
 		8CDA47062BDA09A600F24633 /* CustomStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA47042BDA09A600F24633 /* CustomStyleView.swift */; };
 		8CDA47172BDA141300F24633 /* PagerTabStripView in Frameworks */ = {isa = PBXBuildFile; productRef = 8CDA47162BDA141300F24633 /* PagerTabStripView */; };
@@ -68,6 +70,7 @@
 		2857500F24C21EB400ED22AD /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2857501124C21EB400ED22AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2857501224C21EB400ED22AD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		8CD3EE712BDB8F92009EEC43 /* SegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		8CDA47042BDA09A600F24633 /* CustomStyleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStyleView.swift; sourceTree = "<group>"; };
 		8CDA47152BDA13F700F24633 /* PagerTabStripView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PagerTabStripView; path = ..; sourceTree = "<group>"; };
 		8CDA471B2BDA282700F24633 /* InstagramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramView.swift; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 				8CDA47042BDA09A600F24633 /* CustomStyleView.swift */,
 				8CDA471E2BDA282E00F24633 /* YoutubeView.swift */,
 				8CDA47212BDA283400F24633 /* BarStyleView.swift */,
+				8CD3EE712BDB8F92009EEC43 /* SegmentedView.swift */,
 				8CDA471B2BDA282700F24633 /* InstagramView.swift */,
 				AB89C58826961E9E002E7B28 /* TwitterView.swift */,
 				28070C6126B2005C002346E1 /* Additional Example Source Code */,
@@ -423,6 +427,7 @@
 				AB9F87F826826E4C00CCBFC3 /* PostRow.swift in Sources */,
 				AB9F87F326826DB000CCBFC3 /* PostsList.swift in Sources */,
 				AB89C57B26961DC8002E7B28 /* PostDetail.swift in Sources */,
+				8CD3EE722BDB8F92009EEC43 /* SegmentedView.swift in Sources */,
 				2857502924C21EB400ED22AD /* ExampleApp.swift in Sources */,
 				AB89C58926961E9E002E7B28 /* TwitterView.swift in Sources */,
 				AB7EEE9126ABF076008804D4 /* LikesModel.swift in Sources */,
@@ -449,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CDA47232BDA283400F24633 /* BarStyleView.swift in Sources */,
+				8CD3EE732BDB8F92009EEC43 /* SegmentedView.swift in Sources */,
 				28070C6426B200F5002346E1 /* TwitterView.swift in Sources */,
 				8CDA471D2BDA282700F24633 /* InstagramView.swift in Sources */,
 				8CDA47342BDA284700F24633 /* InstagramNavBarItem.swift in Sources */,

@@ -9,6 +9,43 @@ import Foundation
 import SwiftUI
 
 public enum PagerStyle {
+    case segmentedControl(backgroundColor: Color = .white,
+                          padding: EdgeInsets = EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10),
+                          placedInToolbar: Bool = false)
+
+    case bar(indicatorBarHeight: CGFloat = 2,
+             indicatorBarColor: Color = .blue,
+             tabItemSpacing: CGFloat = 0,
+             placedInToolbar: Bool = false)
+
+    case barButton(indicatorBarHeight: CGFloat = 2,
+                   indicatorBarColor: Color = .blue,
+                   tabItemSpacing: CGFloat = 0, 
+                   tabItemHeight: CGFloat = 60,
+                   placedInToolbar: Bool = false)
+
+    case liner(indicatorBarHeight: CGFloat = 2,
+               indicatorPadding: CGFloat = 5,
+               indicatorBarColor: Color = .blue,
+               padding: EdgeInsets = EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10),
+               tabItemSpacing: CGFloat = 0,
+               tabItemHeight: CGFloat = 60,
+               placedInToolbar: Bool = false)
+
+    case custom(tabItemSpacing: CGFloat,
+                tabItemHeight: CGFloat,
+                placedInToolbar: Bool,
+                indicator: () -> AnyView,
+                background: () -> AnyView)
+
+    internal var indicatorPadding: CGFloat {
+        switch self {
+        case .liner(_, let spacing, _, _, _, _, _):
+            return spacing
+        default:
+            return 8
+        }
+    }
     
     internal var tabItemSpacing: CGFloat {
         switch self {
@@ -16,26 +53,31 @@ public enum PagerStyle {
             return spacing
         case .barButton(_, _, let spacing, _, _):
             return spacing
-        case .liner(_, _, _, let spacing, _, _, _):
+        case .liner(_, _, _, _, let spacing, _, _):
             return spacing
         case .custom(let spacing, _, _, _, _):
             return spacing
+        default:
+            return 0
         }
     }
-    
+
     internal var indicatorBarColor: Color {
         switch self {
         case .bar(_, let color, _, _):
             return color
         case .barButton(_, let color, _, _, _):
             return color
-        case .liner(_, let color, _, _, _, _, _):
+        case .liner(_, _, let color, _, _, _, _):
             return color
         case .custom:
+            /// - Note: Clear color will hide the indicator and it's hard find the cause of this for the user
             return Color.blue
+        default:
+            return Color.clear
         }
     }
-    
+
     internal var indicatorBarHeight: CGFloat {
         switch self {
         case .bar(let height, _, _, _):
@@ -48,12 +90,12 @@ public enum PagerStyle {
             return 2
         }
     }
-    
+
     internal var tabItemHeight: CGFloat {
         switch self {
         case .barButton(_, _, _, let height, _):
             return height
-        case .liner(_, _, _, _, let height, _, _):
+        case .liner(_, _, _, _, _, let height, _):
             return height
         case .custom(_, let height, _, _, _):
             return height
@@ -61,11 +103,11 @@ public enum PagerStyle {
             return 0
         }
     }
-    
+
     internal var backgroundColor: Color {
         switch self {
-        case .liner(_, _, _, _, _, let color, _):
-            return color
+        case .segmentedControl(let backgroundColor, _, _):
+            return backgroundColor
         default:
             return .white
         }
@@ -73,15 +115,19 @@ public enum PagerStyle {
 
     internal var padding: EdgeInsets {
         switch self {
-        case .liner(_, _, let padding, _, _, _, _):
+        case .segmentedControl(_, let padding, _):
+            return padding
+        case .liner(_, _, _, let padding, _, _, _):
             return padding
         default:
-            return EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16)
+            return EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10)
         }
     }
 
     internal var placedInToolbar: Bool {
         switch self {
+        case .segmentedControl(_, _, let placedInToolbar):
+            return placedInToolbar
         case .bar( _, _, _, let placedInToolbar):
             return placedInToolbar
         case .barButton( _, _, _, _, let placedInToolbar):
@@ -92,42 +138,13 @@ public enum PagerStyle {
             return placedInToolbar
         }
     }
-    
-    case liner(indicatorBarHeight: CGFloat = 2,
-               indicatorBarColor: Color = .blue,
-               padding: EdgeInsets = EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16),
-               tabItemSpacing: CGFloat = 10,
-               tabItemHeight: CGFloat = 50,
-               backgroundColor: Color = .white,
-               placedInToolbar: Bool = false)
-    
-    case custom(tabItemSpacing: CGFloat, 
-                tabItemHeight: CGFloat,
-                placedInToolbar: Bool,
-                indicator: () -> AnyView,
-                background: () -> AnyView)
-    
-    case bar(indicatorBarHeight: CGFloat = 2, 
-             indicatorBarColor: Color = .blue,
-             tabItemSpacing: CGFloat = 0,
-             placedInToolbar: Bool = false)
-
-    case barButton(indicatorBarHeight: CGFloat = 2,
-                   indicatorBarColor: Color = .blue,
-                   tabItemSpacing: CGFloat = 10,
-                   tabItemHeight: CGFloat = 50,
-                   placedInToolbar: Bool = false)
 }
 
-
+private struct PagerStyleKey: EnvironmentKey {
+    static let defaultValue = PagerStyle.barButton()
+}
 
 extension EnvironmentValues {
-    private struct PagerStyleKey: EnvironmentKey {
-        static var defaultValue: PagerStyle{
-            PagerStyle.liner()
-        }
-    }
-    
     var pagerStyle: PagerStyle {
         get { self[PagerStyleKey.self] }
         set { self[PagerStyleKey.self] = newValue }
